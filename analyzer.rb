@@ -21,8 +21,8 @@ puts "Word Count : #{words_num}"
 puts "Sentence Count : #{sentences_num}"
 puts "Paragraph Count : #{paragraphs_num}"
 puts "Avg Sentences/Paragraph : #{sentences_num/paragraphs_num}"
-	 "Avg Words/Paragraph : #{words_num/paragraphs_num}"
-	 "Avg Charachters/Word : #{text_no_spaces.length/words_num}"
+puts "Avg Words/Paragraph : #{words_num/paragraphs_num}"
+puts "Avg Charachters/Word : #{text_no_spaces.length/words_num}"
 		
 
 
