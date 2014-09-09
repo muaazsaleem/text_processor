@@ -2,27 +2,25 @@
 
 
 
-lines_num = 0
-text = ""
-File.open("text.txt", "r").each do |line|
-	lines_num+=1
-	text << line
-	#puts line
-end
-text_no_spaces = text.gsub(/\s+/,"")
-words_num = text.split.size
-sentences_num = text.split(/\./).size
-paragraphs_num = text.split(/\n\n/).size
 
-puts "Total lines : #{lines_num}"
+lines = File.readlines("text.txt")
+lines_count = lines.size
+text = lines.join
+
+charachters_count_nospaces = text.gsub(/\s+/,"")
+words_count = text.split.length
+sentences_count = text.split(/\.|\?|!/).length
+paragraphs_count = text.split(/\n\n/).length
+
+puts "Total lines : #{lines_count}"
 puts "Charachter count : #{text.length}"
-puts "Charachter count without spaces : #{text_no_spaces.length}"
-puts "Word Count : #{words_num}"
-puts "Sentence Count : #{sentences_num}"
-puts "Paragraph Count : #{paragraphs_num}"
-puts "Avg Sentences/Paragraph : #{sentences_num/paragraphs_num}"
-puts "Avg Words/Paragraph : #{words_num/paragraphs_num}"
-puts "Avg Charachters/Word : #{text_no_spaces.length/words_num}"
+puts "Charachter count without spaces : #{charachters_count_nospaces.length}"
+puts "Word Count : #{words_count}"
+puts "Sentence Count : #{sentences_count}"
+puts "Paragraph Count : #{paragraphs_count}"
+puts "Avg Sentences/Paragraph : #{sentences_count/paragraphs_count}"
+puts "Avg Words/Paragraph : #{words_count/paragraphs_count}"
+puts "Avg Charachters/Word : #{charachters_count_nospaces.length/words_count}"
 		
 
 
